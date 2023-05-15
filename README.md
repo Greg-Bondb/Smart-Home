@@ -1,4 +1,4 @@
-# 📢 Challenge-48H
+# 📢 Smart-Home
 
 A connected home project made on Arduino MEGA 2560 with an IoT learning kit. The house has many sensors and modules that can be accessed remotely via a web page that exchanges data with the system.
 
