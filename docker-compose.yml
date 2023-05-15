@@ -1,0 +1,19 @@
+version: '3.7'
+services:
+    db:
+        image: mysql:latest
+        command: --default-authentication-plugin=mysql_native_password
+        restart: always
+        environment:
+            MYSQL_ROOT_PASSWORD: 1234
+        ports:
+            - 22000:3306
+        volumes:
+            - ./mysql:/var/lib/mysql
+
+    maison_connectee:
+        image: maison_connectee
+        container_name: container_rfid-website
+        ports:
+            - "22001:80"
+        tty: true
