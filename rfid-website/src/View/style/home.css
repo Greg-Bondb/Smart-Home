@@ -1,0 +1,529 @@
+/*-------------footer-up---------------*/
+
+.footer-up {
+    background-color: white;
+    width: 100%;
+  }
+  
+  .foot-up {
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+  
+  .supporting {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  
+  .supporting .col {
+    float: left;
+    width: 33%;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+  }
+  
+  .supporting img {
+    height: 32px;
+    display: inline;
+  }
+  
+  .supporting h2 {
+    font-weight: 600;
+    font-size: 23px;
+    text-transform: uppercase;
+  }
+  
+  .supporting p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 0 50px;
+    margin-bottom: 40px;
+  }
+  
+  .btn-default {
+    color:#333;
+    border:1px solid #333333;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 10px;
+    letter-spacing: 1.3px;
+    padding: 10px 20px;
+    text-decoration: none;
+    text-transform: uppercase;  
+    display: inline-block;
+    margin-bottom: 20px; 
+    padding-right:50px;
+    padding-left:50px;
+  }
+  
+  .clearfix {
+    clear: both;
+  }
+  
+  @media (max-width: 500px) {
+  
+    .supporting .col {
+      width: 100%;
+    }
+  }
+
+/*-------------welcome---------------*/
+.welcome {
+    width: 100%;
+    display: flex;
+}
+
+
+
+
+
+
+
+
+/*test temp*/
+.block-container {
+  max-width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+
+.block {
+  position: relative;
+  height: 500px;
+  width: 1000px;
+  overflow: hidden;
+}
+
+.block-flex {
+  display: flex;
+  justify-content: center;
+}
+
+.block-title-container {
+  position: absolute;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  height: 80vh;
+  color: white;
+}
+
+.block-title {
+  font-size: 8rem;
+  line-height: 5rem;
+  margin-top: -5rem;
+}
+
+/* .block-title-lg {
+  font-size: 8.13rem;
+  line-height: 8.13rem;
+  font-weight: 700;
+  margin-left: 5rem;
+} */
+
+.block-title-amber {
+  color: #FFC107;
+}
+
+.block-buttons {
+  position: absolute;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  bottom: 6rem;
+  left: 5rem;
+}
+
+.block-button {
+  width: 15rem;
+  padding: 1.25rem;
+  border-radius: 0.75rem;
+  text-align: center;
+  font-weight: 700;
+  position: relative;
+  z-index: 1;
+  color: white;
+  background-color: rgba(17, 24, 39, 0.8);
+  cursor: pointer;
+  transition: all 700ms;
+  margin-left: 2rem;
+}
+
+.block-button:hover {
+  transform: scale(1.1);
+  background-color: rgb(15 23 42 / 0.9);
+}
+
+.block-button::after {
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  left: 40%;
+  width: 0%;
+  height: 2px;
+  margin: 0;
+  background-color: white;
+  transition: all 700ms;
+}
+
+.block-button:hover::after {
+  width: 20%;
+}
+
+.block-button + .block-button::after {
+  left: auto;
+  right: 40%;
+}
+
+.block-button.white::after {
+  background-color: white;
+}
+/*test temp*/
+
+
+
+
+
+
+
+
+
+
+.rond {
+    width: 50%;
+}
+
+.content{
+    width: 100%;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content h1{
+    font-size: 45px;
+    color: #fff;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.content p{
+    font-size: 16px;
+    color: #fff;
+}
+
+/* === removing default button style ===*/
+.button {
+  margin: 0;
+  height: auto;
+  background: transparent;
+  padding: 0;
+  border: none;
+}
+
+/* button styling */
+.button {
+  --border-right: 6px;
+  --text-stroke-color: rgba(255,255,255,0.6);
+  --animation-color:rgb(20, 36, 50);
+  --fs-size: 2em;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: var(--fs-size);
+  font-family: "Arial";
+  position: relative;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+
+/* this is the text, when you hover on button */
+.hover-text {
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(data-text);
+  color: var(--animation-color);
+  width: 0%;
+  inset: 0;
+  border-right: var(--border-right) solid var(--animation-color);
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px var(--animation-color);
+}
+
+/* hover */
+.button:hover .hover-text {
+  width: 100%;
+  filter: drop-shadow(0 0 23px var(--animation-color))
+}
+
+.square {
+position: relative;
+margin: 0 10px;
+width: 400px; height: 400px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.square .one {
+position: absolute;
+width: 100%;
+height: 100%;
+border: 2px solid black;
+border-radius: 32% 58% 69% 43% / 48% 32% 59% 55%;
+transition: 0.5s;
+animation: animate 6s linear infinite;
+
+}
+
+.twitch .one {
+border: none;
+background:rgb(20, 36, 50);;
+}
+
+.square .two {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+border: 2px solid black;
+border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+transition: 0.5s;
+animation: animate 6s linear infinite;
+}
+
+.twitch .two {
+border: none;
+background: rgb(20, 36, 50);;
+}
+
+.square .three {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+border: 2px solid black;
+border-radius: 31% 45% 74% 35% / 38% 56% 51% 37%;
+transition: 0.5s;
+animation: animate2 10s linear infinite;
+}
+
+.twitch .three {
+border: none;
+background:rgb(20, 36, 50);;
+}
+
+.circle {
+position: relative;
+padding: 40px 60px;
+text-align: center;
+transition: 0.5s;
+}
+
+.square{
+color: white;
+}
+
+.content {
+color: #ffffff;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animate2 {
+    0% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+
+}
+
+.DrugRadar{
+    font-size: 40px;
+}
+
+/*-------------welcome text---------------*/
+.serv {
+  height: 1%;
+  display: flex;
+  justify-content: center;
+}
+
+p.Aserv {
+  color: rgba(255, 255, 255);
+  font-size: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.round {
+  background-color: #f54735;
+  border-radius: 90%;
+  width: 5.5rem;
+}
+
+.servout {
+  display: flex;
+  justify-content: center;
+  text-align: left;
+  flex-direction: column;
+  left: 1%;
+  position: relative;
+  margin-top: 1%;
+}
+
+p.Bserv {
+  color: rgb(166, 165, 165);
+  font-size: 20px;
+}
+
+p.Cserv {
+  color: rgb(55, 55, 55);
+  font-size: 30px;
+}
+
+/* ----------------------affichage---------------------- */
+.block-effect {
+  display: flex;
+  align-self: flex-start;
+  flex-direction: column;
+  margin-left: 50px;
+}
+
+.block-effect.after {
+  font-size: calc(8px + 6vw);
+  --td: .6s;
+  margin-top: 5%;
+}
+
+.block-reveal {
+  --t: calc(var(--td) + var(--d));
+  color: transparent;
+  padding: 4px;
+  position: relative;
+  overflow: hidden;
+  animation: revealBlock 0s var(--t) forwards;
+  font-size: 40px;
+}
+
+.block-reveal::after {
+  content: '';
+  width: 0%;
+  height: 100%;
+  padding-bottom: 4px;
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--bc);
+  animation: revealingIn var(--td) var(--d) forwards, revealingOut var(--td) var(--t) forwards;
+}
+
+@keyframes revealBlock {
+  100% {
+    color: white;
+  }
+}
+
+@keyframes revealingIn {
+
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes revealingOut {
+
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+
+}
+
+.one {
+  width: 40%;
+  --bc: #ffffff;
+  --d: .1s;
+}
+
+.two {
+  --bc: #ffffff;
+  --d: .5s;
+}
+
+/* ----------------------content---------------------- */
+.cont {
+  background: url("../images/content.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.info {
+  background: var(--primary);
+  box-shadow: var(--shadow);
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 7rem;
+  /* border-top: 2px white solid; */
+}
+
+/* .border {
+  width: 100%;
+  border-top: 2px white solid;
+  margin: 30px;
+  background-color: #0e0e10;
+} */
+
+.info img {
+  width: 100%;
+}
+
+.infoContent h2 {
+  color: white;
+  margin-bottom: 30px;
+}
+
+.infoContent p {
+  color:#e0d4d4;
+  margin-bottom: 40px;
+}
+
+.btn {
+  background: #333333;
+  border: 0;
+  color: #FFFFFF;
+  padding: 0.6rem 1.3rem;
+  text-decoration: none; 
+}
+
+
+
+

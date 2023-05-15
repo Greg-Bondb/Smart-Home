@@ -1,0 +1,53 @@
+#row {
+    display: none;
+}
+
+.change {
+    width: 100%;
+}
+
+.change2 {
+    width: 50%;
+}
+
+.wid {
+    width: 100%;
+}
+
+.wid2 {
+    width: 100%;
+    background-color: #ff5959;
+    color: rgba(0, 0, 0, 0.695);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-danger {
+    margin-bottom: 40px;
+}
+
+.cent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-all {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.all {
+    display: flex;
+    justify-content: center;
+}
+
+.grey {
+    background-color: #e7dcdc;
+}
+
+#badgeValue {
+    display: none;
+}
