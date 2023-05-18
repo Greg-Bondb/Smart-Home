@@ -27,31 +27,33 @@ Keypad keypad = Keypad(makeKeymap(keys), rowPins, colPins, ROWS, COLS);  // init
 void digifunc() {
   char key = keypad.getKey();  // Lit la touche du keypad
 
-  if (key != 'A') {  // Si une touche est appuyée
-    keycode += key;
-    mul += "*";
-    lcd.clear();
-    lcd.print("code : " + mul);
-    if (keycode.length() >= 4) {
-      for (int i = 0; i < sizeof(utilisateurs) / sizeof(utilisateurs[0]); i++) {
-        if (keycode == utilisateurs[i].code) {
-          last_name = utilisateurs[i].nom;
-          first_name = utilisateurs[i].prenom;
-          lcd.clear();
-          lcd.print(last_name + " " + first_name);
+  if (key) {  // Si une touche est appuyée
+    if (key == 'A') {
+      rfidTime();
+      delay(2000);
+    } else {
+      keycode += key;
+      mul += "*";
+      lcd.clear();
+      lcd.print("code : " + mul);
+      if (keycode.length() >= 4) {
+        for (int i = 0; i < sizeof(utilisateurs) / sizeof(utilisateurs[0]); i++) {
+          if (keycode == utilisateurs[i].code) {
+            last_name = utilisateurs[i].nom;
+            first_name = utilisateurs[i].prenom;
+            lcd.clear();
+            lcd.print(last_name + " " + first_name);
+          }
         }
+        if (last_name == "" || first_name == "") {
+          lcd.clear();
+          lcd.print("code invalide");
+        }
+        keycode = "";
+        mul = "";
+        last_name = "";
+        first_name = "";
       }
-      if (last_name == "" || first_name == "") {
-        lcd.clear();
-        lcd.print("code invalide");
-      }
-      keycode = "";
-      mul = "";
-      last_name = "";
-      first_name = "";
     }
-  } else if (key == 'A') {
-    rfidTime();
-    delay(2000);
   }
 }
